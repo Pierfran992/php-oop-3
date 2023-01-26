@@ -12,7 +12,11 @@
 </head>
 <body>
     <?php
-    echo $impiegato1->getHTML();
+        foreach ($persone as $persona){
+            foreach($persona as $ruolo){
+                echo $ruolo->getHTML();
+            }
+        }
     ?>
 </body>
 </html>
