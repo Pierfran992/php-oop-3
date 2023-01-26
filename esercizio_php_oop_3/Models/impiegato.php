@@ -29,8 +29,8 @@ class Impiegato extends Persona {
     }
 
     public function getHTML(){
-        return parent::getHMTL() . "<br>"
+        return parent::getHTML() . "<br>"
             . $this->getStipendio()->getHTML() . "<br>"
-            . "Data di assunzione: " . $this->getDataDiAssunzione();
+            . "Data di assunzione: " . $this->getDataDiAssunzione() . "<hr>";
     }
 }

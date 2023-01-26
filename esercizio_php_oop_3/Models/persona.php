@@ -60,7 +60,7 @@ class Persona {
         $this -> codiceFiscale = $codiceFiscale;
     }
 
-    public function getHMTL() {
+    public function getHTML() {
         return "Nome: " . $this -> getNome() . "<br>"
         . "Cognome: " . $this -> getCognome() . "<br>"
         . "Data di nascita: " . $this -> getDataDiNascita() . "<br>"
