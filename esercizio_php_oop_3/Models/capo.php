@@ -29,10 +29,20 @@ class Capo extends Persona {
         $this -> bonus = $bonus;
     }
 
+    public function redditoAnnuale() {
+        if ($this -> bonus == 0){
+            return ($this->dividendo * 12); 
+        } else {
+            return (($this->dividendo * 12) + $this -> bonus);
+        }
+    }
+
     public function getHTML(){
         return parent :: getHTML() . "<br>"
-            . "Dividendo: " . $this -> getDividendo() . "<br>"
-            . "Bonus: " . $this -> getBonus() . "<hr>";
+            . "Dividendo: " . $this -> getDividendo() . "&euro;" . "<br>"
+            . "Bonus: " . $this -> getBonus() . "&euro;" . "<br>"
+            . "Reddito Annuale: " . $this -> redditoAnnuale() . "&euro;" 
+            . "<hr>";
     }
 
 }
